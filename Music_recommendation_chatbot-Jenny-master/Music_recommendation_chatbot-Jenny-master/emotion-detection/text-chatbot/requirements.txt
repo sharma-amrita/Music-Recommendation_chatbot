@@ -1,0 +1,6 @@
+Flask==2.0.1
+Keras==2.6.0
+numpy==1.19.5
+nltk==3.6.3
+tensorflow==2.6.0
+protobuf==3.18.0

@@ -1,0 +1,77 @@
+<html>
+
+<head>
+  <title>React App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style/css.css') }}">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <link rel="shortcut icon" type="image/heart-icon" href="https://img.icons8.com/color/48/000000/bot.png" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+  <header class="navbar">
+  <div class="navbar-brand">
+    <img src="{{ url_for('static',filename='style/mod.png') }}" alt="Logo">
+    <span class="app-name"></span>
+  </div>
+  <div class="navbar-links-container">
+    <ul class="navbar-links">
+      <li><a class="blue" href="http://localhost:3000/chatbot">Home</a></li>
+      <li><a class="green" href="http://127.0.0.1:5002/">Audio Chatbot</a></li>
+      <li><a class="blue" href="http://127.0.0.1:5001/">Video Chatbot</a></li>
+    </ul>
+  </div>
+  <div class="navbar-signout-container">
+    <button class="navbar-signout"><a href="http://localhost:3000/">Sign Out</a></button>
+  </div>
+</header>
+
+  <div class="container">
+    <div class="chatbot-container">
+      <h2 id="chatbot-name">Jenny</h2>
+      <div class="chatbox">
+      </div>
+      <div id="userInput">
+        <input id="textInput" type="text" name="msg" placeholder="Enter your text here..." />
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function getBotResponse() {
+      var rawText = $("#textInput").val();
+      var userHtml = '<div class="user-message message"><p>' + rawText + '</p></div>';
+      $("#textInput").val("");
+      $(".chatbox").append(userHtml);
+      document.getElementById("userInput").scrollIntoView({
+        block: "start",
+        behavior: "smooth"
+      });
+      $.get("/get", {
+        msg: rawText
+      }).done(function (data) {
+        var botHtml = '<div class="bot-message message"><p>' + data + '</p></div>';
+        $(".chatbox").append(botHtml);
+        document.getElementById("userInput").scrollIntoView({
+          block: "start",
+          behavior: "smooth"
+        });
+      });
+    }
+
+    $("#textInput").keypress(function (e) {
+      if (e.which == 13) {
+        getBotResponse();
+      }
+    });
+  </script>
+</body>
+
+
+</html>

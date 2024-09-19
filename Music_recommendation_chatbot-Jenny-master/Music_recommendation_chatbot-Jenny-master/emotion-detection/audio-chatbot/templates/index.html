@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jenny Voicebot</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+	<header class="navbar">
+      <div class="navbar-brand">
+        <img src="{{ url_for('static', filename='mod.png') }}" alt="Logo">
+        <span class="app-name"></span>
+      </div>
+      <div class="navbar-links-container">
+        <ul class="navbar-links">
+          <li><a class="blue" href="http://localhost:3000/chatbot">Home</a></li>
+          <li><a class="green" href="http://127.0.0.1:5000/">Text Chatbot</a></li>
+          <li><a class="blue" href="http://127.0.0.1:5001/">Video Chatbot</a></li>
+        </ul>
+      </div>
+      <div class="navbar-signout-container">
+        <button class="navbar-signout"><a href="http://localhost:3000/">Sign Out</a></button>
+      </div>
+    </header>
+
+	<h1 class="hi">Heyy I am Jenny...</h1>
+	<input type="text" id="command" placeholder="Songname...">
+	<button id="playBtn">Play</button>
+
+	<script>
+		const recognition = new window.webkitSpeechRecognition();
+		recognition.continuous = true;
+
+		const speak = (text) => {
+			const msg = new SpeechSynthesisUtterance();
+			msg.text = text;
+			window.speechSynthesis.speak(msg);
+		};
+
+		const playMusic = (song) => {
+			window.open(`https://www.youtube.com/results?search_query=${song}`);
+		};
+
+		const startListening = () => {
+			recognition.start();
+		};
+
+		recognition.onresult = (event) => {
+			const textCommand = event.results[0][0].transcript.toLowerCase();
+			document.getElementById("command").value = textCommand;
+			console.log(textCommand);
+			speak(textCommand);
+			if (textCommand.startsWith("play")) {
+				const song = textCommand.replace("play", "").trim();
+				playMusic(song);
+			}
+		};
+
+		document.getElementById("playBtn").addEventListener("click", () => {
+			const commandInput = document.getElementById("command");
+			const song = commandInput.value.toLowerCase().replace("play", "").trim();
+			if (song) {
+				playMusic(song);
+				commandInput.value = "";
+			}
+		});
+
+		startListening();
+	</script>
+</body>
+</html>

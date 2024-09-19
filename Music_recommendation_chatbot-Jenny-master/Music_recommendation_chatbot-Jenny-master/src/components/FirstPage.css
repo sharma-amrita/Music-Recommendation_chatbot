@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ffeaa7;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.navbar-logo img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.navbar-buttons {
+  display: flex;
+}
+
+.btn-signup {
+  margin-right: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.btn-login {
+  background-color: #2196f3;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex: 1;
+  padding: 50px;
+}
+
+.animation {
+  max-width: 300px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.animation img {
+  width: 100%;
+  height: auto;
+  opacity: 0.8;
+  border-radius: 10px;
+}
+
+.listener {
+  max-width: 300px;
+  margin-left: 20px;
+}
+
+.listener img {
+  width: 100%;
+  height: auto;
+  opacity: 0.8;
+  border-radius: 10px;
+}
+
+.description {
+  max-width: 300px;
+  text-align: center;
+  margin-top: 20px;
+  color: #333;
+}
+
+.description h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.description p {
+  font-size: 1.2rem;
+}

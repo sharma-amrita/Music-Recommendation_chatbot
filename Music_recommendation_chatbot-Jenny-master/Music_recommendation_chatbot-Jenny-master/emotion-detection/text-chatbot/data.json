@@ -1,0 +1,86 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi there", "Is anyone there?","Hey","Hola","Heyy", "Hello","Hi Jenny","Hello Jenny","Heyy Jenny"],
+         "responses": ["Hello my friend", "Heyy, Good to see you", "Hi there, how can I help?"],
+         "context": [""]
+        },
+		{"tag": "reply",
+         "patterns": ["How are you?", "How you feeling?", "What's up?"],
+         "responses": ["I am good , What about you?", "As always, I am happy, What about you?", "I am feeling great,What about you?"],
+         "context": [""]
+        },
+		{"tag": "further_reply",
+         "patterns": ["I am feeling great too", "I am good too" ,"I am happy too","same here"],
+         "responses": ["Nice to hear that", "Glad to hear that", "sounds great my friend"],
+         "context": [""]
+        },
+		{"tag": "sad_feeling",
+         "patterns": ["I am feeling sad today", "I am feeling low today","I am feeling lonely","bad", "My day was bad"],
+         "responses": ["Don't worry mate, I can cheer u up with some happy songs", "It happens sometimes, but no worries till I am here ", "Thats sad to hear, but I can try to make u happy"],
+         "context": [""]
+        },
+		{"tag": "sad_reply",
+         "patterns": ["yeah sure", "ahh, yeah sure","Ok","Sure", "Ok sure","Okay","Okie","yup sure","yes sure"],
+         "responses": ["Ok tell me the song type"],
+         "context": [""]
+        },
+		{"tag": "telling_no",
+         "patterns": ["No", "Nope","Suggest me something diffrent"],
+         "responses": ["Ok tell me your choice", "Ok, I will suggest according to your wish"],
+         "context": [""]
+        },
+		{"tag": "asking",
+         "patterns": ["Suggest me song", "Song","I wanna listen song"],
+         "responses": ["What kind of song u want me to suggest?", "can u tell me genre", "Ok mate, tell me ur mood"],
+         "context": [""]
+        },
+		{"tag": "helping",
+         "patterns": ["How will you do that", "How"],
+         "responses": ["You can say me your choice of song and i will recommend you song based on that"],
+         "context": [""]
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+         "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
+         "context": [""]
+        },
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure"],
+         "context": [""]
+        },
+        {"tag": "noanswer",
+         "patterns": [],
+         "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
+         "context": [""]
+        },
+        {"tag": "options",
+         "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered","How?"],
+         "responses": ["I can recommend you music based on your mood", "I can recommend you song based on your mood"],
+         "context": [""]
+        },
+		{"tag": "angry",
+         "patterns": ["I am feeling very angry", "I am feeling very frustrated","angry","irritated"],
+         "responses": ["This is not good for you my friend, I suggest you to hear lofi and soothing songs to calm your mood"],
+         "context": [""]
+        },
+		{
+		 "tag": "happy_music",
+         "patterns": ["Play me a happy song", "Can you recommend some happy music?", "Suggest me a song for happy mood","Can u play a happy song for me","Ok, Play me a happy song","Yup","Yes"],
+         "responses": ["Sure, here's a song I recommend: <a href='https://www.youtube.com/watch?v=WuMWwPHTSoY'>Dil Dhadakne do</a>","Sure, here's a song I recommend: <a href='https://www.youtube.com/watch?v=yDv0WSgXJVg'>Senorita</a>", "I really enjoy listening to <a href='https://www.youtube.com/watch?v=6w67NOaRe-w'>Illahi</a>. Check it out!"],
+         "context": []
+		},
+		{
+		 "tag": "sad_music",
+         "patterns": ["Play me a sad song", "Can you recommend some sad music?"],
+         "responses": ["Sure, here's a song I recommend: <a href='https://www.youtube.com/watch?v=7Z5E-PcWb18'>Mai Royaa</a>","Sure, here's a song I recommend: <a href='https://www.youtube.com/watch?v=PVxc5mIHVuQ'>Pachtaoge</a>", "I hope this is helpful <a href='https://www.youtube.com/watch?v=wx89ZdkwtS8'>Ae Dil hai Mushkil</a>. Check it out!"],
+         "context": []
+		},
+		{
+		 "tag": "lofi_music",
+         "patterns": ["Play me a lofi song", "Can you recommend some soothing music?","Ok suggest me soothing song","soothing song","lofi","Ok suggest lofi"],
+         "responses": ["Sure, This will surely calm you down: <a href='https://www.youtube.com/watch?v=vi9HJqc1b0o&ab_channel=KMslaG'>Shayad</a>","Sure, here's a song I recommend: <a href='https://www.youtube.com/watch?v=CtgD91Ev4NU&ab_channel=T-Series'>Rozaana</a>", "I hope this will calm you down <a href='https://www.youtube.com/watch?v=eDQeJF5czZY&ab_channel=hindisongs'>Iktaara</a>. Check it out!"],
+         "context": []
+		}
+   ]
+}

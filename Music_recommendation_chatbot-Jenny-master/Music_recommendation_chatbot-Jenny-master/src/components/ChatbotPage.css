@@ -1,0 +1,106 @@
+/* Styles for the AppHeader component */
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffeaa7;
+    padding: 10px 50px;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-container img {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .app-name {
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .nav-links {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .nav-links li {
+    margin-left: 20px;
+    list-style: none;
+  }
+  
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .nav-links li:nth-child(odd) a {
+    background-color: #33cc33;
+    
+  }
+  
+  .nav-links li:nth-child(even) a {
+    background-color: #0077c2;
+  }
+  
+  .nav-links li a:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  /* Styles for the ChatbotPage component */
+  .chatbot-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: calc(100vh - 100px);
+    background-color: white;
+    padding: 20px;
+  }
+  
+  .intro-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    max-width: 50%;
+  }
+  
+  .intro-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .intro-text {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  .animation-container {
+    max-width: 50%;
+  }
+  
+  .animation {
+    width: 100%;
+    height: auto;
+  }  
+  .sign-out-button{
+    margin-right: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+  }
+  
